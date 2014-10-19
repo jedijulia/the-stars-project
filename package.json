@@ -1,0 +1,28 @@
+{
+    "name": "the-stars-project",
+    "version": "0.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jedijulia/the-stars-project.git"
+    },
+    "authors": [
+        "Arnelle Balane <arnellebalane@gmail.com>",
+        "Julia Camille Menchavez <jcmenchavez@gmail.com>",
+        "Elise Margaret Sumanga <elisesumanga@gmail.com>"
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/jedijulia/the-stars-project/issues"
+    },
+    "homepage": "https://github.com/jedijulia/the-stars-project",
+    "devDependencies": {
+        "gulp": "*",
+        "gulp-jshint": "*",
+        "jshint-stylish": "*"
+    }
+}
