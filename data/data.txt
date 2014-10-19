@@ -1,0 +1,300 @@
+Alpha Canis Majoris         -1.46   1.43    9
+Alpha Carinae               -0.73  -5.64  310
+Alpha Centauri              -0.29   4.06    4
+Alpha Boötis                -0.05  -0.31   37
+Alpha Lyrae                  0.03   0.58   25
+Alpha Aurigae                0.07  -0.49   42
+Beta Orionis                 0.15v -6.72v 770
+Alpha Canis Minoris          0.36   2.64   11
+Alpha Eridani                0.45  -2.77  144
+Alpha Orionis                0.55v -5.04v 430
+Beta Centauri                0.61  -5.42  530
+Alpha Aquilae                0.77   2.21   17
+Alpha Crucis                 0.79  -4.17  320
+Alpha Tauri                  0.86v -0.64v  65
+Alpha Scorpii                0.95v -5.39v 600
+Alpha Virginis               0.97  -3.56  260
+Beta Geminorum               1.14   1.07   34
+Alpha Piscis Austrini        1.15   1.72   25
+Alpha Cygni                  1.24  -8.74 3000
+Beta Crucis                  1.26  -3.91  350
+Alpha Leonis                 1.36  -0.52   78
+Epsilon Canis Majoris        1.50  -4.10  430
+Alpha Geminorum              1.58   0.59   52
+Lambda Scorpii               1.62  -5.05  700
+Gamma Crucis                 1.63  -0.52   88
+Gamma Orionis                1.64  -2.72  240
+Beta Tauri                   1.66  -1.36  130
+Beta Carinae                 1.67  -0.99  111
+Epsilon Orionis              1.69  -6.38 1300
+Alpha Gruis                  1.74  -0.72  101
+Zeta Orionis                 1.75  -5.25  820
+Epsilon Ursae Majoris        1.77  -0.20   81
+Alpha Persei                 1.80  -4.49  590
+Alpha Ursae Majoris          1.80  -1.09  124
+Gamma Velorum                1.81  -5.25  840
+Delta Canis Majoris          1.83  -6.87 1800
+Epsilon Sagittarii           1.84  -1.39  145
+Eta Ursae Majoris            1.86  -0.59  101
+Theta Scorpii                1.86  -2.75  270
+Epsilon Carinae              1.87  -4.57  630
+Beta Aurigae                 1.90  -0.10   82
+Alpha Trianguli Australis    1.92  -3.61  420
+Gamma Geminorum              1.93  -0.60  105
+Alpha Pavonis                1.93  -1.82  180
+Delta Velorum                1.95   0.01   80
+Beta Canis Majoris           1.98  -3.95  500
+Alpha Hydrae                 1.98  -1.70  180
+Alpha Ursae Minoris          1.99v -3.62v 430
+Gamma Leonis                 2.00  -0.93  126
+Alpha Arietis                2.01   0.48   66
+Beta Ceti                    2.04  -0.30   96
+Sigma Sagittarii             2.05  -2.14  220
+Theta Centauri               2.06   0.70   61
+Alpha Andromedae             2.07  -0.30   97
+Beta Andromedae              2.07  -1.86  200
+Kappa Orionis                2.07  -4.65  720
+Beta Ursae Minoris           2.07  -0.87  127
+Beta Gruis                   2.07v -1.52v 170
+Alpha Ophiuchi               2.08   1.30   47
+Beta Persei                  2.09e -0.18   93
+Gamma Andromedae             2.10  -3.08  360
+Beta Leonis                  2.14   1.92   36
+Gamma Cassiopeiae            2.15v -4.22v 610
+Gamma Centauri               2.20  -0.81  130
+Zeta Puppis                  2.21  -5.95 1400
+Iota Carinae                 2.21v -4.42v 690
+Alpha Coronae Borealis       2.22e  0.42   75
+Lambda Velorum               2.23  -3.99  570
+Zeta Ursae Majoris           2.23   0.33   78
+Gamma Cygni                  2.23  -6.12 1500
+Alpha Cassiopeiae            2.24  -1.99  230
+Gamma Draconis               2.24  -1.04  148
+Delta Orionis                2.25e -4.99  920
+Beta Cassiopeiae             2.28   1.17   55
+Epsilon Centauri             2.29  -3.02  380
+Delta Scorpii                2.29  -3.16  400
+Epsilon Scorpii              2.29   0.78   65
+Alpha Lupi                   2.30  -3.83  550
+Eta Centauri                 2.33v -2.55v 310
+Beta Ursae Majoris           2.34   0.41   79
+Epsilon Boötis               2.35  -1.69  210
+Epsilon Pegasi               2.38  -4.19  670
+Kappa Scorpii                2.39  -3.38  460
+Alpha Phoenicis              2.40   0.52   77
+Gamma Ursae Majoris          2.41   0.36   84
+Eta Ophiuchi                 2.43   0.37   84
+Beta Pegasi                  2.44v -1.49v 200
+Eta Canis Majoris            2.45  -7.51 3000
+Alpha Cephei                 2.45   1.58   49
+Kappa Velorum                2.47  -3.62  540
+Epsilon Cygni                2.48   0.76   72
+Alpha Pegasi                 2.49  -0.67  140
+Alpha Ceti                   2.54  -1.61  220
+Zeta Ophiuchi                2.54  -3.20  460
+Zeta Centauri                2.55  -2.81  390
+Delta Leonis                 2.56   1.32   58
+Beta Scorpii                 2.56  -3.50  530
+Alpha Leporis                2.58  -5.40 1300
+Delta Centauri               2.58v -2.84v 400
+Gamma Corvi                  2.58  -0.94  165
+Zeta Sagittarii              2.60   0.42   89
+Beta Librae                  2.61  -0.84  160
+Alpha Serpentis              2.63   0.87   73
+Beta Arietis                 2.64   1.33   60
+Alpha Librae                 2.64   0.77   77
+Alpha Columbae               2.65  -1.93  270
+Theta Aurigae                2.65  -0.98  170
+Beta Corvi                   2.65  -0.51  140
+Delta Cassiopeiae            2.66   0.24   99
+Eta Boötis                   2.68   2.41   37
+eta Lupi                     2.68  -3.35  520
+Iota Aurigae                 2.69  -3.29  510
+Mu Velorum                   2.69  -0.06  116
+Alpha Muscae                 2.69  -2.17  310
+Upsilon Scorpii              2.70  -3.31  520
+Pi Puppis                    2.71  -4.92 1100
+Delta Sagittarii             2.72  -2.14  310
+Gamma Aquilae                2.72  -3.03  460
+Delta Ophiuchi               2.73  -0.86  170
+Eta Draconis                 2.73   0.58   88
+Theta Carinae                2.74  -2.91  440
+Gamma Virginis               2.74   2.38   39
+Iota Orionis                 2.75  -5.30 1300
+Iota Centauri                2.75   1.48   59
+Beta Ophiuchi                2.76   0.76   82
+Beta Eridani                 2.78   0.60   89
+Beta Herculis                2.78  -0.50  150
+Delta Crucis                 2.79  -2.45  360
+Beta Draconis                2.79  -2.43  360
+Alpha Canum Venaticorum      2.80v  0.16v 110
+Gamma Lupi                   2.80  -3.40  570
+Beta Leporis                 2.81  -0.63  160
+Zeta Herculis                2.81   2.64   35
+Beta Hydri                   2.82   3.45   24
+Tau Scorpii                  2.82  -2.78  430
+Lambda Sagittarii            2.82   0.95   77
+Gamma Pegasi                 2.83  -2.22  330
+Rho Puppis                   2.83   1.41   63
+Beta Trianguli Australis     2.83   2.38   40
+Zeta Persei                  2.84  -4.55  980
+Beta Arae                    2.84  -3.49  600
+Alpha Arae                   2.84  -1.51  240
+Eta Tauri                    2.85  -2.41  370
+Epsilon Virginis             2.85   0.37  102
+Delta Capricorni             2.85e  2.49   39
+Alpha Hydri                  2.86   1.16   71
+Delta Cygni                  2.86  -0.74  170
+Mu Geminorum                 2.87v -1.39v 230
+Gamma Trianguli Australis    2.87  -0.87  180
+Alpha Tucanae                2.87  -1.05  200
+Theta Eridani                2.88  -0.59  160
+Pi Sagittarii                2.88  -2.77  440
+Beta Canis Minoris           2.89  -0.70  170
+Pi Scorpii                   2.89  -2.85  460
+Epsilon Persei               2.90  -3.19  540
+Sigma Scorpii                2.90v -3.86v 730
+Beta Cygni                   2.90  -2.31  390
+Beta Aquarii                 2.90  -3.47  610
+Gamma Persei                 2.91  -1.57  260
+Upsilon Carinae              2.92  -5.56 1600
+Eta Pegasi                   2.93  -1.16  215
+Tau Puppis                   2.94  -0.80  185
+Delta Corvi                  2.94   0.79   88
+Alpha Aquarii                2.95  -3.88  760
+Gamma Eridani                2.97  -1.19  220
+Zeta Tauri                   2.97  -2.56  420
+Epsilon Leonis               2.97  -1.46  250
+Gamma² Sagittarii            2.98   0.63   96
+Gamma Hydrae                 2.99  -0.05  132
+Iota¹ Scorpii                2.99  -5.71 1800
+Zeta Aquilae                 2.99   0.96   83
+Beta Trianguli               3.00   0.09  124
+Psi Ursae Majoris            3.00  -0.27  147
+Gamma Ursae Minoris          3.00  -2.84  480
+Mu¹ Scorpii                  3.00  -4.01  820
+Gamma Gruis                  3.00  -0.97  205
+Delta Persei                 3.01  -3.04  530
+Zeta Canis Majoris           3.02  -2.05  340
+Omicron² Canis Majoris       3.02  -6.46 2600
+Epsilon Corvi                3.02  -1.82  300
+Epsilon Aurigae              3.03e -5.95 2000
+Beta Muscae                  3.04  -1.86  310
+Gamma Boötis                 3.04   0.96   85
+Beta Capricorni              3.05  -2.07  340
+Epsilon Geminorum            3.06  -4.15  900
+Mu Ursae Majoris             3.06e -1.35  250
+Delta Draconis               3.07   0.63  100
+Eta Sagittarii               3.10  -0.20  149
+Zeta Hydrae                  3.11  -0.21  150
+Nu Hydrae                    3.11  -0.03  139
+Lambda Centauri              3.11  -2.39  410
+Alpha Indi                   3.11   0.65  101
+Beta Columbae                3.12   1.02   86
+Iota Ursae Majoris           3.12   2.29   48
+Zeta Arae                    3.12  -3.11  570
+Delta Herculis               3.12   1.21   78
+Kappa Centauri               3.13  -2.96  540
+Alpha Lyncis                 3.14  -1.02  220
+N Velorum                    3.16  -1.15  240
+Pi Herculis                  3.16  -2.10  370
+Nu Puppis                    3.17  -2.39  420
+Theta Ursae Majoris          3.17   2.52   44
+Zeta Draconis                3.17  -1.92  340
+Phi Sagittarii               3.17  -1.08  230
+Eta Aurigae                  3.18  -0.96  220
+Alpha Circini                3.18   2.11   53
+Pi³ Orionis                  3.19   3.67   26
+Epsilon Leporis              3.19  -1.02  225
+Kappa Ophiuchi               3.19   1.09   86
+G Scorpii                    3.19   0.24  127
+Zeta Cygni                   3.21  -0.12  151
+Gamma Cephei                 3.21   2.51   45
+Delta Lupi                   3.22  -2.75  510
+Epsilon Ophiuchi             3.23   0.64  108
+Eta Serpentis                3.23   1.84   62
+Beta Cephei                  3.23v -3.08v 600
+Alpha Pictoris               3.24   0.83   99
+Theta Aquilae                3.24  -1.48  285
+Sigma Puppis                 3.25  -0.51  185
+Pi Hydrae                    3.25   0.79  101
+Sigma Librae                 3.25  -1.51  290
+Gamma Lyrae                  3.25  -3.20  630
+Gamma Hydri                  3.26  -0.83  215
+Delta Andromedae             3.27   0.81  101
+Theta Ophiuchi               3.27  -2.92  560
+Delta Aquarii                3.27  -0.18  160
+Mu Leporis                   3.29v -0.47v 185
+Omega Carinae                3.29  -1.99  370
+Iota Draconis                3.29   0.81  102
+Alpha Doradus                3.30  -0.36  175
+p Carinae                    3.30  -2.62  500
+Mu Centauri                  3.30v -2.74v 530
+Eta Geminorum                3.31v -1.84v 350
+Alpha Herculis               3.31v -2.04v 380
+Gamma Arae                   3.31  -4.40  100
+Beta Phoenicis               3.32  -0.55  190
+Rho Persei                   3.32v -1.67v 325
+Delta Ursae Majoris          3.32   1.33   81
+Eta Scorpii                  3.32   1.61   72
+Nu Ophiuchi                  3.32  -0.03  155
+Tau Sagittarii               3.32   0.48  120
+Alpha Reticuli               3.33  -0.17  165
+Theta Leonis                 3.33  -0.35  180
+Xi Puppis                    3.34  -4.74 1300
+Epsilon Cassiopeiae          3.35  -2.31  440
+Eta Orionis                  3.35  -3.86  900
+Xi Geminorum                 3.35   2.13   57
+Omicron Ursae Majoris        3.35v -0.40v 185
+Delta Aquilae                3.36   2.43   50
+Epsilon Lupi                 3.37  -2.58  500
+Zeta Virginis                3.38   1.62   73
+Epsilon Hydrae               3.38   0.29  135
+Lambda Orionis               3.39  -4.16 1100
+q Carinae                    3.39  -3.38  740
+Delta Virginis               3.39  -0.57  200
+Zeta Cephei                  3.39  -3.35  730
+Theta² Tauri                 3.40   0.10  150
+Gamma Phoenicis              3.41  -0.87  235
+Lambda Tauri                 3.41e -1.87  370
+Nu Centauri                  3.41  -2.41  475
+Zeta Lupi                    3.41   0.65  116
+Eta Cephei                   3.41   2.63   47
+Zeta Pegasi                  3.41  -0.62  210
+Alpha Trianguli              3.42   1.95   64
+Eta Lupi                     3.42  -2.48  495
+Mu Herculis                  3.42   3.80   27
+Beta Pavonis                 3.42   0.29  140
+a Carinae                    3.43  -2.11  420
+Zeta Leonis                  3.43  -1.08  260
+Lambda Aquilae               3.43   0.51  125
+Lambda Ursae Majoris         3.45   0.38  135
+Beta Lyrae                   3.45e -3.71  880
+Eta Cassiopeiae              3.46   4.59   19
+Eta Ceti                     3.46   0.67  118
+Chi Carinae                  3.46  -1.91  390
+Delta Bootis                 3.46   0.69  117
+Gamma Ceti                   3.47   1.47   82
+Eta Leonis                   3.48  -5.60  100
+Eta Herculis                 3.48   0.80  112
+Tau Ceti                     3.49   5.68   12
+Sigma Canis Majoris          3.49  -4.37 1200
+Nu Ursae Majoris             3.49  -2.07  420
+Beta Bootis                  3.49  -0.64  220
+Alpha Telescopii             3.49  -0.93  250
+Epsilon Gruis                3.49   0.49  130
+Kappa Canis Majoris          3.50  -3.42  790
+Delta Geminorum              3.50   2.22   59
+Iota Cephei                  3.50   0.76  115
+Gamma Sagittae               3.51  -1.11  270
+Mu Pegasi                    3.51   0.74  117
+Delta Eridani                3.52   3.74   29
+Omicron Leonis               3.52   0.43  135
+Phi Velorum                  3.52  -5.34 1900
+Xi² Sagittarii               3.52  -1.77  370
+Theta Pegasi                 3.52   1.16   97
+Epsilon Tauri                3.53   0.15  155
+Beta Cancri                  3.53  -1.24  290
+Xi Hydrae                    3.54   0.55  130
+Mu Serpentis                 3.54   0.14  155
+Xi Serpentis                 3.54   0.99  105
