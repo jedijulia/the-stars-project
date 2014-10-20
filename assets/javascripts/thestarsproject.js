@@ -6,8 +6,21 @@ require.config({
 });
 
 require(['jquery', 'gradient-descent'], function($, GradientDescent) {
-    $('#input').on('change', function() {
-        var file = this.files[0];
+    $('#training-input').on('change', function() {
+        var training = parse(this.files[0]);
+        training.done(function(training_data) {
+            var gd = new GradientDescent({ features: 2, cost_threshold: 0.01, normalize: true });
+            gd.train(training_data);
+            gd.subscribe('done', function(e) {
+                console.info('training done!');
+                console.log('cost: ' + e.cost);
+                console.log('thetas: ' + e.thetas);
+            });
+        });
+    });
+
+    function parse(file) {
+        var deferred = $.Deferred();
         var reader = new FileReader();
         reader.onload = function(e) {
             var data = e.target.result.split('\n');
@@ -21,15 +34,9 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
                 };
                 training_data.push(object);
             }
-            
-            var gd = new GradientDescent({ features: 2, cost_threshold: 0.01, normalize: true });
-            gd.train(training_data);
-            gd.subscribe('done', function(e) {
-                console.info('training done!');
-                console.log('cost: ' + gd.cost);
-                console.log('thetas: ' + e);
-            });
+            deferred.resolve(training_data);
         };
         reader.readAsText(file);
-    });
+        return deferred.promise();
+    }
 });
