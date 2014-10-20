@@ -1,0 +1,198 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 62.5%;
+}
+
+body {
+    height: 100%;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    font-size: 0;
+    text-align: center;
+    -webkit-transform: translateY(-55%);
+    -moz-transform: translateY(-55%);
+    transform: translateY(-55%);
+}
+
+h1 {
+    font: normal 8rem/1 "ChelseaMarket";
+    color: #333333;
+    margin-bottom: 50px;
+}
+
+label {
+    display: inline-block;
+    width: 50%;
+    font: normal 1.4rem "OpenSans";
+    color: #333333;
+}
+
+input {
+    width: 50%;
+    font: normal 1.4rem "Ubuntu Mono", "OpenSans";
+    color: #333333;
+    text-align: right;
+    padding: 5px;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    width: auto;
+}
+
+section {
+    display: inline-block;
+    vertical-align: top;
+    width: 22%;
+    height: 150px;
+    border: 1px solid red;
+    margin: 0 1.8%;
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+section.focus {
+    width: 32%;
+    cursor: auto;
+}
+
+section#configure.focus {
+    height: 250px;
+}
+
+section.blur {
+    width: 17%;
+}
+
+section .step {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    font: normal 2rem/40px "ExistenceLight";
+    border: 1px solid blue;
+    border-radius: 50%;
+    margin-left: -20px;
+}
+
+section.focus .step {
+    width: 20px;
+    height: 20px;
+    top: 15px;
+    left: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 20px;
+    margin-left: 0;
+}
+
+section h2 {
+    font: normal 4rem/1 "ExistenceLight";
+    color: #333333;
+    margin-top: 80px;
+}
+
+section.focus h2 {
+    font-size: 1.6rem;
+    margin: 19px 0 0 40px;
+}
+
+#configure.focus h2 {
+    margin-right: 73%;
+}
+
+#train.focus h2 {
+    margin-right: 81%;
+}
+
+#validate.focus h2 {
+    margin-right: 75%;
+}
+
+section .contents {
+    font-size: 0;
+    text-align: left;
+    margin-top: 100%;
+    padding: 15px;
+    opacity: 0;
+}
+
+section.focus .contents {
+    margin-top: 0;
+    opacity: 1;
+}
+
+section .field {
+    margin-bottom: 5px;
+}
+
+section .field.file {
+    height: 45px;
+    text-align: center;
+    position: relative;
+}
+
+section .field.file input {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    z-index: 1;
+    width: 90%;
+    border: 1px solid transparent;
+    opacity: 0;
+}
+
+section .field.file p {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    font: normal 1.6rem "OpenSans";
+    color: #333333;
+    padding: 5px 15px;
+    border: 1px solid blue;
+}
+
+section .actions {
+    text-align: center;
+}
+
+section button {
+    min-width: 80px;
+    font: normal 1.4rem/1 "Open Sans";
+    color: #333333;
+    padding: 7px 9px;
+    background-color: #ffffff;
+    border: 1px solid #aaaaaa;
+}
+
+section,
+section .step,
+section h2 {
+    -webkit-transition: all 500ms cubic-bezier(.6,-0.44,.37,1.41);
+    -moz-transition: all 500ms cubic-bezier(.6,-0.44,.37,1.41);
+    transition: all 500ms cubic-bezier(.6,-0.44,.37,1.41);
+}
+
+section .contents {
+    -webkit-transition: all 500ms cubic-bezier(.67,-0.18,.41,1.23);
+    -moz-transition: all 500ms cubic-bezier(.67,-0.18,.41,1.23);
+    transition: all 500ms cubic-bezier(.67,-0.18,.41,1.23);
+}

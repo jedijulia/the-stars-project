@@ -3,10 +3,72 @@
     <head>
         <meta charset="utf-8">
         <title>the stars project</title>
+        <link rel="stylesheet" href="assets/stylesheets/fonts.css">
+        <link rel="stylesheet" href="assets/stylesheets/thestarsproject.css">
     </head>
 
     <body>
-        <input type="file" id="trainig-input">        
+        <main>
+            <h1>gradient descent</h1>
+
+            <section id="configure">
+                <span class="step">1</span>
+                <h2>Configure</h2>
+                <div class="contents">
+                    <div class="field">
+                        <label>number of features</label>
+                        <input type="text" name="features" value="3" disabled>
+                    </div>
+                    <div class="field">
+                        <label>alpha</label>
+                        <input type="text" name="alpha" value="0.01">
+                    </div>
+                    <div class="field">
+                        <label>initial thetas</label>
+                        <input type="text" name="thetas" value="0, 0, 0">
+                    </div>
+                    <div class="field">
+                        <label>cost change threshold</label>
+                        <input type="text" name="cost_change_threshold" value="0.000001">
+                    </div>
+                    <div class="field">
+                        <label>normalize</label>
+                        <input type="checkbox" name="normalize">
+                    </div>
+                    <div class="field actions">
+                        <button>Configure</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="train">
+                <span class="step">2</span>
+                <h2>Train</h2>
+                <div class="contents">
+                    <div class="field file">
+                        <input type="file" name="training-data">
+                        <p>Select Training Data</p>
+                    </div>
+                    <div class="field actions">
+                        <button>Train</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="validate">
+                <span class="step">3</span>
+                <h2>Validate</h2>
+                <div class="contents">
+                    <div class="field file">
+                        <input type="file" name="valudation-data">
+                        <p>Select Validation Data</p>
+                    </div>
+                    <div class="field actions">
+                        <button>Validate</button>
+                    </div>
+                </div>
+            </section>
+        </main>
 
         <script data-main="assets/javascripts/thestarsproject.js" src="bower_components/requirejs/require.js"></script>
     </body>

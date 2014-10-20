@@ -6,6 +6,17 @@ require.config({
 });
 
 require(['jquery', 'gradient-descent'], function($, GradientDescent) {
+    $('section:not(.focus)').on('click', function() {
+        $('section').not(this).removeClass('focus').addClass('blur');
+        $(this).removeClass('blur').addClass('focus');
+    });
+
+
+
+    /*
+     * Integrating with the gradient descent library.
+     */
+
     $('#training-input').on('change', function() {
         var training = parse(this.files[0]);
         training.done(function(training_data) {
