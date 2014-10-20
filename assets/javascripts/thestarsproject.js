@@ -11,14 +11,23 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
         $(this).removeClass('blur').addClass('focus');
     });
 
+    $('input[type="file"]').on('change', function() {
+        $(this).next('p').text(this.files[0].name);
+    });
+
+    $('button').on('click', function() {
+        $(this).addClass('okay');
+        $(this).siblings('h3').addClass('okay');
+    });
+
 
 
     /*
      * Integrating with the gradient descent library.
      */
 
-    $('#training-input').on('change', function() {
-        var training = parse(this.files[0]);
+    $('#train button').on('click', function() {
+        var training = parse($('input[name="training-data"]').get(0).files[0]);
         training.done(function(training_data) {
             var gd = new GradientDescent({ features: 2, cost_threshold: 0.01, normalize: true });
             gd.train(training_data);
@@ -26,6 +35,9 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
                 console.info('training done!');
                 console.log('cost: ' + e.cost);
                 console.log('thetas: ' + e.thetas);
+
+                console.info('validating...');
+                console.log('mse: ' + gd.validate(training_data));
             });
         });
     });

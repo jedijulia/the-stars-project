@@ -15,6 +15,7 @@ html {
 
 body {
     height: 100%;
+    background-color: #4dd0e1;
 }
 
 main {
@@ -46,8 +47,13 @@ input {
     font: normal 1.4rem "Ubuntu Mono", "OpenSans";
     color: #333333;
     text-align: right;
-    padding: 5px;
+    padding: 6px;
+    border: 1px solid #aaaaaa;
     outline: none;
+}
+
+input:focus {
+    border-color: #d81b60;
 }
 
 input[type="checkbox"] {
@@ -59,9 +65,10 @@ section {
     vertical-align: top;
     width: 22%;
     height: 150px;
-    border: 1px solid red;
-    margin: 0 1.8%;
     font-size: 1rem;
+    background-color: #0097a7;
+    border-radius: 3px;
+    margin: 0 1.8%;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -69,11 +76,12 @@ section {
 
 section.focus {
     width: 32%;
+    background-color: #ffffff;
     cursor: auto;
 }
 
 section#configure.focus {
-    height: 250px;
+    height: 254px;
 }
 
 section.blur {
@@ -82,12 +90,14 @@ section.blur {
 
 section .step {
     position: absolute;
-    top: 30px;
+    top: 27px;
     left: 50%;
     width: 40px;
     height: 40px;
-    font: normal 2rem/40px "ExistenceLight";
-    border: 1px solid blue;
+    font: bold 2rem/40px "ExistenceLight";
+    color: #ffffff;
+    background-color: #d81b60;
+    border: 1px solid #d81b60;
     border-radius: 50%;
     margin-left: -20px;
 }
@@ -105,12 +115,13 @@ section.focus .step {
 
 section h2 {
     font: normal 4rem/1 "ExistenceLight";
-    color: #333333;
+    color: #ffffff;
     margin-top: 80px;
 }
 
 section.focus h2 {
     font-size: 1.6rem;
+    color: #000000;
     margin: 19px 0 0 40px;
 }
 
@@ -157,6 +168,7 @@ section .field.file input {
     width: 90%;
     border: 1px solid transparent;
     opacity: 0;
+    cursor: pointer;
 }
 
 section .field.file p {
@@ -165,22 +177,110 @@ section .field.file p {
     left: 5%;
     right: 5%;
     font: normal 1.6rem "OpenSans";
-    color: #333333;
+    color: #ffffff;
     padding: 5px 15px;
-    border: 1px solid blue;
+    background-color: #ef6c00;
+    border: 1px solid #ef6c00;
+    border-radius: 2px;
+}
+
+section .field.file input:hover + p,
+section .field.file input:focus + p {
+    background-color: #f57c00;
 }
 
 section .actions {
     text-align: center;
 }
 
+section .actions h3 {
+    display: inline-block;
+    width: 0%;
+    font: normal 1.4rem/1 "OpenSans";
+    text-align: right;
+    color: #333333;
+    padding-right: 25px;
+    margin-top: 9px;
+    opacity: 0;
+}
+
+section .actions h3.okay {
+    width: 82%;
+    opacity: 1;
+}
+
 section button {
+    vertical-align: top;
     min-width: 80px;
     font: normal 1.4rem/1 "Open Sans";
-    color: #333333;
-    padding: 7px 9px;
-    background-color: #ffffff;
-    border: 1px solid #aaaaaa;
+    color: #ffffff;
+    padding: 8px 10px;
+    background-color: #259b24;
+    border: 1px solid #259b24;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+}
+
+section button:hover,
+section button:focus {
+    background-color: #2baf2b;
+}
+
+section button.okay {
+    min-width: 0;
+    width: 32px;
+    text-indent: -1000px;
+}
+
+section button.okay:before {
+    content: '✔';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    font: bold 2rem/32px "OpenSans";
+    text-align: center;
+    text-indent: 0;
+    color: #ffffff;
+}
+
+section button.loading {
+    text-indent: -1000px;
+}
+
+section button.loading:before,
+section button.loading:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: #0a7e07;
+    border-radius: 50%;
+}
+
+section button.loading:before {
+    left: 22%;
+    -webkit-animation: pulsate 750ms infinite;
+    -moz-animation: pulsate 750ms infinite;
+    animation: pulsate 750ms infinite;
+}
+
+section button.loading:after {
+    right: 22%;
+    -webkit-animation: pulsate 750ms infinite 375ms;
+    -moz-animation: pulsate 750ms infinite 375ms;
+    animation: pulsate 750ms infinite 375ms;
+}
+
+@-webkit-keyframes pulsate {
+    0% { -webkit-transform: scale(0.5); }
+    50% { -webkit-transform: scale(0.8); }
+    100% { -webkit-transform: scale(0.5); }
 }
 
 section,
@@ -195,4 +295,16 @@ section .contents {
     -webkit-transition: all 500ms cubic-bezier(.67,-0.18,.41,1.23);
     -moz-transition: all 500ms cubic-bezier(.67,-0.18,.41,1.23);
     transition: all 500ms cubic-bezier(.67,-0.18,.41,1.23);
+}
+
+section button {
+    -webkit-transition: background-color 200ms ease, width 700ms ease;
+    -moz-transition: background-color 200ms ease, width 700ms ease;
+    transition: background-color 200ms ease, width 700mes ease;
+}
+
+section .actions h3 {
+    -webkit-transition: width 2750ms cubic-bezier(.67,-0.18,.41,1.23), opacity 500ms ease 150ms;
+    -moz-transition: width 275ms cubic-bezier(.67,-0.18,.41,1.23), opacity 500ms ease 150ms;
+    transition: width 275ms cubic-bezier(.67,-0.18,.41,1.23), opacity 500ms ease 150ms;
 }
