@@ -21,10 +21,15 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
                 };
                 training_data.push(object);
             }
-            console.log(training_data);
+            
+            var gd = new GradientDescent({ features: 2, cost_threshold: 0.01, normalize: true });
+            gd.train(training_data);
+            gd.subscribe('done', function(e) {
+                console.info('training done!');
+                console.log('cost: ' + gd.cost);
+                console.log('thetas: ' + e);
+            });
         };
         reader.readAsText(file);
     });
-    var gd = new GradientDescent({ features: 2, cost_threshold: 0.01, alpha: 0.1 });
-    gd.train();
 });
