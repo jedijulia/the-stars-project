@@ -7,15 +7,13 @@ require.config({
 
 require(['jquery', 'gradient-descent'], function($, GradientDescent) {
     $('main').on('click', 'section.clickable:not(.focus)', function() {
-        $('section').not(this).removeClass('focus').addClass('blur');
+        $('section').not(this).removeClass('focus expanded').addClass('blur');
         $(this).removeClass('blur').addClass('focus');
     });
 
     $('input[type="file"]').on('change', function() {
         $(this).next('p').text(this.files[0].name);
     });
-
-
 
     /*
      * Integrating with the gradient descent library.
@@ -54,13 +52,42 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
             training.done(function(training_data) {
                 gd.train(training_data);
                 var iteration = 0;
+                var costs = [];
+                var max_cost = 0;
+
                 gd.subscribe('cost_update', function(e) {
+                    costs.push(e);
+                    max_cost = Math.max(max_cost, e);
                     console.info(++iteration + ': ' + e);
                 });
                 gd.subscribe('done', function(e) {
                     button.toggleClass('loading okay');
                     button.siblings('h3').html('cost: <strong>' + e.cost + '</strong>').addClass('okay');
                     $('#validate').addClass('clickable');
+                    $('#train span').removeClass('hidden').off('click').on('click', function() {
+                        $('#train').addClass('expanded');
+                        var canvas = $('#graph').get(0);
+                        var context = canvas.getContext('2d');
+                        canvas.width = $('.graph').innerWidth();
+                        canvas.height = 236;
+
+                        var interval = 100;
+                        var cost_interval = Math.ceil(costs.length / interval);
+                        var graph_interval = Math.ceil(canvas.width / interval);
+                        context.strokeStyle = '#9c27b0';
+                        context.lineWidth = 2;
+                        context.beginPath();
+                        context.moveTo(0, canvas.height - (costs[0] / max_cost * canvas.height));
+                        for (var i = 1; i < costs.length; i++) {
+                            var x = i * graph_interval;
+                            var y = canvas.height - (costs[i * cost_interval] / max_cost * canvas.height);
+                            context.lineTo(x, y);
+                        }
+                        context.stroke();
+                    });
+                    $('#graph').off('click').on('click', function() {
+                        $('#train').removeClass('expanded');
+                    });
                 });
                 gd.subscribe('terminate', function(e) {
                     $('.notification').text(e).addClass('shown');

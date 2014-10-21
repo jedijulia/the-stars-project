@@ -18,6 +18,10 @@ body {
     background-color: #4dd0e1;
 }
 
+.hidden {
+    display: none;
+}
+
 .notification {
     position: absolute;
     top: -100px;
@@ -212,17 +216,66 @@ section .actions {
 section .actions h3 {
     display: inline-block;
     width: 0%;
-    font: normal 1.4rem/1 "OpenSans";
+    font: normal 1.4rem "OpenSans";
     text-align: right;
     color: #333333;
-    padding-right: 25px;
     margin-top: 9px;
     opacity: 0;
 }
 
 section .actions h3.okay {
     width: 82%;
+    padding-right: 25px;
     opacity: 1;
+}
+
+#train .actions span {
+    position: absolute;
+    right: 75px;
+    bottom: 23px;
+    width: 19px;
+    height: 19px;
+    font: bold 1.3rem/19px "OpenSans";
+    text-align: center;
+    color: #ffffff;
+    background-color: #607d8b;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#train .actions span:hover {
+    background-color: #78909c;
+}
+
+#train .actions h3.okay {
+    padding-right: 35px;
+}
+
+#train.expanded {
+    height: 300px;
+}
+
+section .graph {
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    z-index: 2;
+    background-color: #eeeeee;
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#train.expanded .graph {
+    top: 49px;
+}
+
+#train.expanded .actions span {
+    opacity: 0;
 }
 
 section button {
@@ -308,7 +361,9 @@ section button.loading:after {
 
 section,
 section .step,
-section h2 {
+section h2, 
+section .graph,
+section .actions span {
     -webkit-transition: all 500ms cubic-bezier(.6,-0.44,.37,1.41);
     -moz-transition: all 500ms cubic-bezier(.6,-0.44,.37,1.41);
     transition: all 500ms cubic-bezier(.6,-0.44,.37,1.41);
