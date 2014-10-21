@@ -44,7 +44,7 @@ label {
 
 input {
     width: 50%;
-    font: normal 1.4rem "Ubuntu Mono", "OpenSans";
+    font: normal 1.4rem "Ubuntu Mono", "Consolas", "OpenSans";
     color: #333333;
     text-align: right;
     padding: 6px;
@@ -212,7 +212,7 @@ section .actions h3.okay {
 section button {
     vertical-align: top;
     width: 90px;
-    font: normal 1.4rem/1 "Open Sans";
+    font: normal 1.4rem/1 "OpenSans";
     text-align: center;
     color: #ffffff;
     padding: 8px 10px;
