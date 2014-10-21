@@ -31,7 +31,21 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
     var gd = null;
 
     $('#configure button').on('click', function() {
-        // @todo create gradient descent based on configuration value
+        var features = parseInt($('input[name="features"]').val());
+        var alpha = parseFloat($('input[name="alpha"]').val());
+        var thetas = $('input[name="thetas"]').val().split(/, */g);
+        for (var i = 0; i < thetas.length; i++) {
+            thetas[i] = parseFloat(thetas[i]);
+        }
+        var cost_change_threshold = parseFloat($('input[name="cost_change_threshold"]').val());
+        var normalize = $('input[name="normalize"]').prop('checked');
+        gd = new GradientDescent({
+            features: features,
+            cost_change_threshold: cost_change_threshold,
+            normalize: normalize,
+            alpha: alpha,
+            thetas: thetas
+        });
     });
 
     $('#train button').on('click', function() {
@@ -39,7 +53,7 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
         if (training_input.files.length) {
             var training = parse(training_input.files[0]);
             training.done(function(training_data) {
-                var gd = new GradientDescent({ features: 2, cost_threshold: 0.01, normalize: true });
+                gd = new GradientDescent({ features: 2, cost_threshold: 0.01, normalize: true });
                 gd.train(training_data);
                 gd.subscribe('done', function(e) {
                     console.info('training done!');
