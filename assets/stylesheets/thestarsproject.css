@@ -1,0 +1,478 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 62.5%;
+}
+
+body {
+    height: 100%;
+    background-color: #4dd0e1;
+}
+
+.hidden {
+    display: none;
+}
+
+.notification {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    font: bold 2rem/1 "ExistenceLight";
+    text-align: center;
+    color: #ffffff;
+    padding: 30px 0 20px 0;
+    background-color: #e00032;
+}
+
+.notification.shown {
+    top: -10px;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    font-size: 0;
+    text-align: center;
+    -webkit-transform: translateY(-55%);
+    -moz-transform: translateY(-55%);
+    transform: translateY(-55%);
+}
+
+h1 {
+    font: normal 8rem/1 "ChelseaMarket";
+    color: #333333;
+    margin-bottom: 50px;
+}
+
+label {
+    display: inline-block;
+    width: 50%;
+    font: normal 1.4rem "OpenSans";
+    color: #333333;
+}
+
+input {
+    width: 50%;
+    font: normal 1.4rem "Ubuntu Mono", "Consolas", "OpenSans";
+    color: #333333;
+    text-align: right;
+    padding: 6px;
+    border: 1px solid #aaaaaa;
+    outline: none;
+}
+
+input:focus {
+    border-color: #d81b60;
+}
+
+input[type="checkbox"] {
+    width: auto;
+}
+
+.field {
+    margin-bottom: 5px;
+}
+
+.field.file {
+    height: 45px;
+    text-align: center;
+    position: relative;
+}
+
+.field.file input {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    z-index: 1;
+    width: 90%;
+    border: 1px solid transparent;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.field.file p {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    font: normal 1.6rem "OpenSans";
+    color: #ffffff;
+    padding: 5px 15px;
+    background-color: #ef6c00;
+    border: 1px solid #ef6c00;
+    border-radius: 2px;
+}
+
+.field.file input:hover + p,
+.field.file input:focus + p {
+    background-color: #f57c00;
+}
+
+.actions {
+    text-align: center;
+}
+
+section {
+    display: inline-block;
+    vertical-align: top;
+    width: 22%;
+    height: 150px;
+    font-size: 1rem;
+    background-color: #0097a7;
+    border-radius: 3px;
+    margin: 0 1.8%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+section.focus {
+    width: 32%;
+    background-color: #ffffff;
+    cursor: auto;
+}
+
+section#configure.focus {
+    height: 282px;
+}
+
+section.blur {
+    width: 17%;
+}
+
+section .step {
+    position: absolute;
+    top: 27px;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    font: bold 2rem/40px "ExistenceLight";
+    color: #ffffff;
+    background-color: #d81b60;
+    border: 1px solid #d81b60;
+    border-radius: 50%;
+    margin-left: -20px;
+}
+
+section.focus .step {
+    width: 20px;
+    height: 20px;
+    top: 15px;
+    left: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 20px;
+    margin-left: 0;
+}
+
+section h2 {
+    font: normal 4rem/1 "ExistenceLight";
+    color: #ffffff;
+    margin-top: 80px;
+}
+
+section.focus h2 {
+    font-size: 1.6rem;
+    color: #000000;
+    margin: 19px 0 0 40px;
+}
+
+#configure.focus h2 {
+    margin-right: 73%;
+}
+
+#train.focus h2 {
+    margin-right: 81%;
+}
+
+#validate.focus h2 {
+    margin-right: 75%;
+}
+
+section .contents {
+    font-size: 0;
+    text-align: left;
+    margin-top: 100%;
+    padding: 15px;
+    opacity: 0;
+}
+
+section.focus .contents {
+    margin-top: 0;
+    opacity: 1;
+}
+
+section .actions h3 {
+    display: inline-block;
+    width: 0%;
+    font: normal 1.4rem "OpenSans";
+    text-align: right;
+    color: #333333;
+    margin-top: 9px;
+    opacity: 0;
+}
+
+section .actions h3.okay {
+    width: 82%;
+    padding-right: 25px;
+    opacity: 1;
+}
+
+#train .actions span {
+    position: absolute;
+    right: 75px;
+    bottom: 23px;
+    width: 19px;
+    height: 19px;
+    font: bold 1.3rem/19px "OpenSans";
+    text-align: center;
+    color: #ffffff;
+    background-color: #607d8b;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 1;
+}
+
+#train .actions span:hover {
+    background-color: #78909c;
+}
+
+#train .actions h3.okay {
+    padding-right: 35px;
+}
+
+#train.expanded {
+    height: 300px;
+}
+
+section .graph {
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    z-index: 2;
+    background-color: #eeeeee;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#train.expanded .graph {
+    top: 49px;
+}
+
+#train.expanded .actions span {
+    opacity: 0;
+}
+
+button {
+    vertical-align: top;
+    width: 90px;
+    font: normal 1.4rem/1 "OpenSans";
+    text-align: center;
+    color: #ffffff;
+    padding: 8px 10px;
+    background-color: #259b24;
+    border: 1px solid #259b24;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+}
+
+button:hover,
+button:focus {
+    background-color: #2baf2b;
+}
+
+section button.okay {
+    min-width: 0;
+    width: 32px;
+    text-indent: -1000px;
+}
+
+section button.okay:before {
+    content: '✔';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    font: bold 2rem/32px "OpenSans";
+    text-align: center;
+    text-indent: 0;
+    color: #ffffff;
+}
+
+section button.loading {
+    text-indent: -1000px;
+}
+
+section button.loading:before,
+section button.loading:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background-color: #0a7e07;
+    border-radius: 50%;
+}
+
+section button.loading:before {
+    left: 22%;
+    -webkit-animation: pulsate 750ms infinite;
+    -moz-animation: pulsate 750ms infinite;
+    animation: pulsate 750ms infinite;
+}
+
+section button.loading:after {
+    right: 22%;
+    -webkit-animation: pulsate 750ms infinite 375ms;
+    -moz-animation: pulsate 750ms infinite 375ms;
+    animation: pulsate 750ms infinite 375ms;
+}
+
+.corner {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.corner.active {
+    width: 320px;
+    height: 161px;
+    border-radius: 2px;
+}
+
+.corner form {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    transform: scale(0);
+}
+
+.corner.active form {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+}
+
+.corner .actions {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.corner.active .actions {
+    right: 115px;
+    bottom: 15px;
+}
+
+.corner button {
+    width: 50px;
+    height: 50px;
+    text-indent: -1000px;
+    border-radius: 50%;
+}
+
+.corner button:before {
+    content: "?";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font: bold 2.4rem/50px "OpenSansLight";
+    color: #ffffff;
+    text-indent: 0;
+}
+
+.corner.active button {
+    width: 90px;
+    height: 32px;
+    text-indent: 0;
+    border-radius: 2px;
+}
+
+.corner.active button:before {
+    display: none;
+}
+
+@-webkit-keyframes pulsate {
+    0% { -webkit-transform: scale(0.5); }
+    50% { -webkit-transform: scale(0.8); }
+    100% { -webkit-transform: scale(0.5); }
+}
+
+.notification {
+    -webkit-transition: all 300ms cubic-bezier(.6,-0.44,.37,1.41);
+    -moz-transition: all 300ms cubic-bezier(.6,-0.44,.37,1.41);
+    transition: all 300ms cubic-bezier(.6,-0.44,.37,1.41);
+}
+
+section,
+section .step,
+section h2, 
+section .graph,
+section .actions span {
+    -webkit-transition: all 500ms cubic-bezier(.6,-0.44,.37,1.41);
+    -moz-transition: all 500ms cubic-bezier(.6,-0.44,.37,1.41);
+    transition: all 500ms cubic-bezier(.6,-0.44,.37,1.41);
+}
+
+section .contents {
+    -webkit-transition: all 500ms cubic-bezier(.67,-0.18,.41,1.23);
+    -moz-transition: all 500ms cubic-bezier(.67,-0.18,.41,1.23);
+    transition: all 500ms cubic-bezier(.67,-0.18,.41,1.23);
+}
+
+section button {
+    -webkit-transition: background-color 200ms ease, width 200ms ease;
+    -moz-transition: background-color 200ms ease, width 200ms ease;
+    transition: background-color 200ms ease, width 200ms ease;
+}
+
+section .actions h3 {
+    -webkit-transition: width 2750ms cubic-bezier(.67,-0.18,.41,1.23), opacity 500ms ease 150ms;
+    -moz-transition: width 275ms cubic-bezier(.67,-0.18,.41,1.23), opacity 500ms ease 150ms;
+    transition: width 275ms cubic-bezier(.67,-0.18,.41,1.23), opacity 500ms ease 150ms;
+}
+
+.corner,
+.corner .actions {
+    -webkit-transition: all 250ms cubic-bezier(0,.36,.62,1.38);
+    -moz-transition: all 250ms cubic-bezier(0,.36,.62,1.38);
+    transition: all 250ms cubic-bezier(0,.36,.62,1.38);
+}
+
+.corner button {
+    -webkit-transition: all 250ms cubic-bezier(0,.36,.62,1.38), text-indent 150ms ease;
+    -moz-transition: all 250ms cubic-bezier(0,.36,.62,1.38), text-indent 150ms ease;
+    transition: all 250ms cubic-bezier(0,.36,.62,1.38), text-indent 150ms ease;
+}
+
+.corner form {
+    -webkit-transition: all 400ms cubic-bezier(.67,-0.18,.41,1.23) 70ms;
+    -moz-transition: all 400ms cubic-bezier(.67,-0.18,.41,1.23) 70ms;
+    transition: all 400ms cubic-bezier(.67,-0.18,.41,1.23) 70ms;
+}
