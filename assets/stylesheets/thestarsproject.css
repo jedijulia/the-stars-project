@@ -18,6 +18,22 @@ body {
     background-color: #4dd0e1;
 }
 
+.notification {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    font: normal 2rem/1 "ExistenceLight";
+    text-align: center;
+    color: #ffffff;
+    padding: 25px 0 15px 0;
+    background-color: #e00032;
+}
+
+.notification.shown {
+    top: -10px;
+}
+
 main {
     position: absolute;
     top: 50%;
@@ -282,6 +298,12 @@ section button.loading:after {
     0% { -webkit-transform: scale(0.5); }
     50% { -webkit-transform: scale(0.8); }
     100% { -webkit-transform: scale(0.5); }
+}
+
+.notification {
+    -webkit-transition: all 300ms cubic-bezier(.6,-0.44,.37,1.41);
+    -moz-transition: all 300ms cubic-bezier(.6,-0.44,.37,1.41);
+    transition: all 300ms cubic-bezier(.6,-0.44,.37,1.41);
 }
 
 section,

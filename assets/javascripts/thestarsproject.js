@@ -59,7 +59,8 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
                     $('#validate').addClass('clickable');
                 });
                 gd.subscribe('terminate', function(e) {
-                    alert(e);
+                    $('.notification').text(e).addClass('shown');
+                    button.removeClass('loading');
                 });
             });
         }
