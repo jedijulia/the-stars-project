@@ -32,6 +32,7 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
         }
         var cost_change_threshold = parseFloat($('input[name="cost_change_threshold"]').val());
         var normalize = $('input[name="normalize"]').prop('checked');
+
         gd = new GradientDescent({
             features: features,
             cost_change_threshold: cost_change_threshold,
@@ -39,6 +40,7 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
             alpha: alpha,
             thetas: thetas
         });
+
         $('#train').addClass('clickable');
         $(this).addClass('okay');
     });
@@ -55,6 +57,9 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
                     button.toggleClass('loading okay');
                     button.siblings('h3').html('cost: <strong>' + e.cost + '</strong>').addClass('okay');
                     $('#validate').addClass('clickable');
+                });
+                gd.subscribe('terminate', function(e) {
+                    alert(e);
                 });
             });
         }
