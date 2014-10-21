@@ -40,7 +40,10 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
         });
 
         $('#train').addClass('clickable');
-        $(this).addClass('okay');
+        $(this).toggleClass('okay');
+        setTimeout(function() {
+            $('#configure, #train').toggleClass('focus blur');
+        }, 350);
     });
 
     $('#train').on('click', 'button:not(.okay)', function() {
