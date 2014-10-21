@@ -6,7 +6,7 @@ require.config({
 });
 
 require(['jquery', 'gradient-descent'], function($, GradientDescent) {
-    $('section.clickable:not(.focus)').on('click', function() {
+    $('main').on('click', 'section.clickable:not(.focus)', function() {
         $('section').not(this).removeClass('focus').addClass('blur');
         $(this).removeClass('blur').addClass('focus');
     });
@@ -17,10 +17,10 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
 
     // demo for changing the look of the button and showing the
     // corresponding result message. REMOVE THIS LATER.
-    $('button').on('click', function() {
-        $(this).addClass('okay');
-        $(this).siblings('h3').addClass('okay');
-    });
+    // $('button').on('click', function() {
+    //     $(this).addClass('okay');
+    //     $(this).siblings('h3').addClass('okay');
+    // });
 
 
 
@@ -46,30 +46,39 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
             alpha: alpha,
             thetas: thetas
         });
+        $('#train').addClass('clickable');
+        $(this).addClass('okay');
     });
 
     $('#train button').on('click', function() {
+        var button = $(this);
         var training_input = $('input[name="training-data"]').get(0);
         if (training_input.files.length) {
+            button.addClass('loading');
             var training = parse(training_input.files[0]);
             training.done(function(training_data) {
-                gd = new GradientDescent({ features: 2, cost_threshold: 0.01, normalize: true });
                 gd.train(training_data);
                 gd.subscribe('done', function(e) {
-                    console.info('training done!');
-                    console.log('cost: ' + e.cost);
-                    console.log('thetas: ' + e.thetas);
-
-                    console.info('validating...');
-                    console.log('mse: ' + gd.validate(training_data));
+                    button.toggleClass('loading okay');
+                    button.siblings('h3').html('cost: <strong>' + e.cost + '</strong>').addClass('okay');
+                    $('#validate').addClass('clickable');
                 });
             });
         }
     });
 
     $('#validate button').on('click', function() {
-        // @todo validate the gradient descent based on selected 
-        //       validation data
+        var button = $(this);
+        var validation_input = $('input[name="validation-data"]').get(0);
+        if (validation_input.files.length) {
+            button.addClass('loading');
+            var validation = parse(validation_input.files[0]);
+            validation.done(function(validation_data) {
+                var mse = gd.validate(validation_data);
+                button.toggleClass('loading okay');
+                button.siblings('h3').html('mse: <strong>' + mse + '</strong>').addClass('okay');
+            });
+        }
     });
 
     function parse(file) {
