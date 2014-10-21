@@ -28,6 +28,10 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
         for (var i = 0; i < thetas.length; i++) {
             thetas[i] = parseFloat(thetas[i]);
         }
+        var powers = $('input[name="powers"]').val().split(/, */g);
+        for (var j = 0; j < powers.length; j++) {
+            powers[j] = parseFloat(powers[j]);
+        }
         var cost_change_threshold = parseFloat($('input[name="cost_change_threshold"]').val());
         var normalize = $('input[name="normalize"]').prop('checked');
 
@@ -36,7 +40,8 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
             cost_change_threshold: cost_change_threshold,
             normalize: normalize,
             alpha: alpha,
-            thetas: thetas
+            thetas: thetas,
+            powers: powers
         });
 
         $('#train').addClass('clickable');
