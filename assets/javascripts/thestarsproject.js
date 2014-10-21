@@ -64,7 +64,7 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
                     button.toggleClass('loading okay');
                     button.siblings('h3').html('cost: <strong>' + e.cost + '</strong>').addClass('okay');
                     $('#validate').addClass('clickable');
-                    $('#train span').removeClass('hidden').off('click').on('click', function() {
+                    $('#train .actions span').removeClass('hidden').off('click').on('click', function() {
                         $('#train').addClass('expanded');
                         var canvas = $('#graph').get(0);
                         var context = canvas.getContext('2d');
