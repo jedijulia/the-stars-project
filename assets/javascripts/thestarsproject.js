@@ -96,6 +96,15 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
                     $('#graph').off('click').on('click', function() {
                         $('#train').removeClass('expanded');
                     });
+
+                    $('.corner').removeClass('hidden');
+                    $('body').off('click').on('click', '.corner:not(.active) button', function() {
+                        $('.corner').addClass('active');
+                    }).on('click', '.corner.active button', function() {
+                        var absolute_magnitude = parseFloat($('input[name="absolute_magnitude"]').val());
+                        var distance = parseFloat($('input[name="distance"]').val());
+                        $('input[name="apparent_magnitude"]').val(gd.predict([absolute_magnitude, distance]));
+                    });
                 });
                 gd.subscribe('terminate', function(e) {
                     $('.notification').text(e).addClass('shown');

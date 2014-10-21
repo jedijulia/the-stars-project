@@ -82,6 +82,26 @@
             </section>
         </main>
 
+        <div class="corner hidden">
+            <form action="#">
+                <div class="field">
+                    <label>absolute magnitude</label>
+                    <input type="text" name="absolute_magnitude">
+                </div>
+                <div class="field">
+                    <label>distance (light years)</label>
+                    <input type="text" name="distance">
+                </div>
+                <div class="field">
+                    <label>apparent magnitude</label>
+                    <input type="text" name="apparent_magnitude" readonly>
+                </div>
+            </form>
+            <div class="actions">
+                <button>Predict</button>
+            </div>
+        </div>
+
         <script data-main="assets/javascripts/thestarsproject.js" src="bower_components/requirejs/require.js"></script>
     </body>
 </html>
