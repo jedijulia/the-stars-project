@@ -53,6 +53,10 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
             var training = parse(training_input.files[0]);
             training.done(function(training_data) {
                 gd.train(training_data);
+                var iteration = 0;
+                gd.subscribe('cost_update', function(e) {
+                    console.info(++iteration + ': ' + e);
+                });
                 gd.subscribe('done', function(e) {
                     button.toggleClass('loading okay');
                     button.siblings('h3').html('cost: <strong>' + e.cost + '</strong>').addClass('okay');
