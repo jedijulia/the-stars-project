@@ -211,8 +211,9 @@ section .actions h3.okay {
 
 section button {
     vertical-align: top;
-    min-width: 80px;
+    width: 90px;
     font: normal 1.4rem/1 "Open Sans";
+    text-align: center;
     color: #ffffff;
     padding: 8px 10px;
     background-color: #259b24;
@@ -298,9 +299,9 @@ section .contents {
 }
 
 section button {
-    -webkit-transition: background-color 200ms ease, width 700ms ease;
-    -moz-transition: background-color 200ms ease, width 700ms ease;
-    transition: background-color 200ms ease, width 700mes ease;
+    -webkit-transition: background-color 200ms ease, width 200ms ease;
+    -moz-transition: background-color 200ms ease, width 200ms ease;
+    transition: background-color 200ms ease, width 200ms ease;
 }
 
 section .actions h3 {

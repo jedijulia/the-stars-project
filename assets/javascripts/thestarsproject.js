@@ -6,7 +6,7 @@ require.config({
 });
 
 require(['jquery', 'gradient-descent'], function($, GradientDescent) {
-    $('section:not(.focus)').on('click', function() {
+    $('section.clickable:not(.focus)').on('click', function() {
         $('section').not(this).removeClass('focus').addClass('blur');
         $(this).removeClass('blur').addClass('focus');
     });
@@ -15,6 +15,8 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
         $(this).next('p').text(this.files[0].name);
     });
 
+    // demo for changing the look of the button and showing the
+    // corresponding result message. REMOVE THIS LATER.
     $('button').on('click', function() {
         $(this).addClass('okay');
         $(this).siblings('h3').addClass('okay');
@@ -26,20 +28,34 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
      * Integrating with the gradient descent library.
      */
 
-    $('#train button').on('click', function() {
-        var training = parse($('input[name="training-data"]').get(0).files[0]);
-        training.done(function(training_data) {
-            var gd = new GradientDescent({ features: 2, cost_threshold: 0.01, normalize: true });
-            gd.train(training_data);
-            gd.subscribe('done', function(e) {
-                console.info('training done!');
-                console.log('cost: ' + e.cost);
-                console.log('thetas: ' + e.thetas);
+    var gd = null;
 
-                console.info('validating...');
-                console.log('mse: ' + gd.validate(training_data));
+    $('#configure button').on('click', function() {
+        // @todo create gradient descent based on configuration value
+    });
+
+    $('#train button').on('click', function() {
+        var training_input = $('input[name="training-data"]').get(0);
+        if (training_input.files.length) {
+            var training = parse(training_input.files[0]);
+            training.done(function(training_data) {
+                var gd = new GradientDescent({ features: 2, cost_threshold: 0.01, normalize: true });
+                gd.train(training_data);
+                gd.subscribe('done', function(e) {
+                    console.info('training done!');
+                    console.log('cost: ' + e.cost);
+                    console.log('thetas: ' + e.thetas);
+
+                    console.info('validating...');
+                    console.log('mse: ' + gd.validate(training_data));
+                });
             });
-        });
+        }
+    });
+
+    $('#validate button').on('click', function() {
+        // @todo validate the gradient descent based on selected 
+        //       validation data
     });
 
     function parse(file) {
