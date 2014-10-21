@@ -15,13 +15,6 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
         $(this).next('p').text(this.files[0].name);
     });
 
-    // demo for changing the look of the button and showing the
-    // corresponding result message. REMOVE THIS LATER.
-    // $('button').on('click', function() {
-    //     $(this).addClass('okay');
-    //     $(this).siblings('h3').addClass('okay');
-    // });
-
 
 
     /*
@@ -30,7 +23,7 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
 
     var gd = null;
 
-    $('#configure button').on('click', function() {
+    $('#configure').on('click', 'button:not(.okay)', function() {
         var features = parseInt($('input[name="features"]').val());
         var alpha = parseFloat($('input[name="alpha"]').val());
         var thetas = $('input[name="thetas"]').val().split(/, */g);
@@ -50,7 +43,7 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
         $(this).addClass('okay');
     });
 
-    $('#train button').on('click', function() {
+    $('#train').on('click', 'button:not(.okay)', function() {
         var button = $(this);
         var training_input = $('input[name="training-data"]').get(0);
         if (training_input.files.length) {
@@ -67,7 +60,7 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
         }
     });
 
-    $('#validate button').on('click', function() {
+    $('#validate').on('click', 'button:not(.okay)', function() {
         var button = $(this);
         var validation_input = $('input[name="validation-data"]').get(0);
         if (validation_input.files.length) {
