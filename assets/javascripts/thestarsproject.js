@@ -74,6 +74,12 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
                     $('#validate').addClass('clickable');
                     $('#train .actions span').removeClass('hidden').off('click').on('click', function() {
                         $('#train').addClass('expanded');
+                        $('.graph .label-x').text(iteration);
+                        $('.graph .label-y').text(Math.round(max_cost * 100) / 100);
+                        setTimeout(function() {
+                            $('.graph').addClass('reveal');
+                        }, 300);
+
                         var canvas = $('#graph').get(0);
                         var context = canvas.getContext('2d');
                         canvas.width = $('.graph').innerWidth();
@@ -95,6 +101,7 @@ require(['jquery', 'gradient-descent'], function($, GradientDescent) {
                     });
                     $('#graph').off('click').on('click', function() {
                         $('#train').removeClass('expanded');
+                        $('.graph').removeClass('reveal');
                     });
 
                     $('.corner').removeClass('hidden');
