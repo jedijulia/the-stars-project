@@ -270,6 +270,26 @@ section .graph {
     cursor: pointer;
 }
 
+section .graph.reveal {
+    overflow: visible;
+}
+
+section .graph-label {
+    position: absolute;
+    font: normal 1.2rem/1 "Ubuntu Mono", "Consolas", "OpenSans";
+    color: #333333;
+}
+
+section .label-y {
+    top: -7px;
+    left: 5px;
+}
+
+section .label-x {
+    right: 0;
+    bottom: 7px;
+}
+
 #train.expanded .graph {
     top: 49px;
 }
