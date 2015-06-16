@@ -1,6 +1,8 @@
 the-stars-project
 =================
 
+predict star apparent magnitudes
+
 ##### Running this project
 
 - clone this repository
